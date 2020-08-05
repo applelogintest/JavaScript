@@ -12,8 +12,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 350px;
   border-radius: 1em;
+  box-shadow: 2px 2px 5px 0px black;
 }
 
 header {
