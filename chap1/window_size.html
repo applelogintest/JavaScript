@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="window_size.css" rel="stylesheet" />
+    <title>Window Size</title>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <script>
+      const box = document.querySelector(".box");
+      console.log(box);
+      function updateBox() {
+        box.innerHTML = `
+          <h1> window.screen : ${window.screen.width}, ${window.screen.height} </h1> </br>
+          <h1> window.outer : ${window.outerWidth}, ${window.outerHeight} </h1> </br>
+          <h1> window.inner : ${window.innerWidth}, ${window.innerHeight} </h1> </br>
+          <h1> documentElement.clientWidth : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight} </h1> 
+        `;
+      }
+
+      window.addEventListener("resize", () => {
+        updateBox();
+      });
+      updateBox();
+    </script>
+  </body>
+</html>

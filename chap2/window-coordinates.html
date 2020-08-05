@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="window-coordinates.css" />
+
+    <title>Coordinates</title>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <aside class="btns">
+      <button class="scroll-by">scroll by 100px</button>
+      <button class="scroll-to">scroll to 100px</button>
+      <button class="scroll-into">scroll into special</button>
+    </aside>
+
+    <script>
+      const special = document.querySelector(".special");
+
+      special.addEventListener("click", (event) => {
+        const rect = special.getBoundingClientRect();
+        console.log(rect);
+        console.log(`client :  ${event.clientX}, ${event.clientY}`);
+        console.log(`page :  ${event.pageX}, ${event.pageY}`);
+      });
+
+      const scrollBy = document.querySelector(".scroll-by");
+      const scrollTo = document.querySelector(".scroll-to");
+      const scrollInto = document.querySelector(".scroll-into");
+
+      scrollBy.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+
+      scrollTo.addEventListener("click", () => {
+        window.scrollTo({
+          top: 200,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+
+      scrollInto.addEventListener("click", () => {
+        special.scrollIntoView(false);
+      });
+    </script>
+  </body>
+</html>

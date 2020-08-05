@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  /* overflow: hidden; */
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2px;
+  background-color: lightgoldenrodyellow;
+}
+
+.special {
+  background-color: coral;
+}
+
+aside {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}

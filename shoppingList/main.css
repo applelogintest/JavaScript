@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: lightslategrey;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  border-radius: 1em;
+}
+
+header {
+  display: flex;
+  background-color: lightskyblue;
+  color: white;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+section {
+  text-align: center;
+  border-bottom-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  background-color: lightskyblue;
+  width: 100%;
+}
+
+.list {
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 5%;
+  min-height: 300px;
+  background-color: lavenderblush;
+}
+
+.item {
+  display: flex;
+}
+.title {
+  flex: 6;
+}
+.delete {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.inputText {
+  font-size: 20px;
+  width: 100%;
+  padding: 1px 0;
+  border: 0;
+}
+
+.btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 100px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.icon {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
