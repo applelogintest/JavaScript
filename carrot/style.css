@@ -84,6 +84,11 @@ body {
   height: 100px;
 }
 
+.bug:hover,
+.carrot:hover {
+  transform: scale(1.1);
+}
+
 .bug {
   position: absolute;
   background: url("./img/bug.png") no-repeat;

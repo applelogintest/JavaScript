@@ -74,6 +74,7 @@ gameBoard.addEventListener("click", (event) => {
   } else if (event.target.className === "bug") {
     startBtn.style.opacity = "0";
     restartBox.style.zIndex = "1";
+    restartBox.childNodes[3].textContent = "You Lost";
     clearInterval(intervalId);
   }
 });
