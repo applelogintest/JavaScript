@@ -62,8 +62,9 @@ section {
 .inputText {
   font-size: 20px;
   width: 100%;
-  padding: 1px 0;
-  border: 0;
+  padding: 3px 0;
+  border: none;
+  outline: none;
 }
 
 .btn {

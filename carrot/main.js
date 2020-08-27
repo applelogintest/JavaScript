@@ -52,6 +52,8 @@ body.addEventListener("click", (event) => {
     carrotCount.textContent = "0";
     startBtn.style.opacity = "1";
     restartBox.style.zIndex = "1";
+    restartBox.childNodes[3].textContent = "You Lost";
+
     while (gameBoard.firstChild) {
       gameBoard.removeChild(gameBoard.firstChild);
     }

@@ -5,7 +5,8 @@ const inputText = document.querySelector(".inputText");
 const btn = document.querySelector(".btn");
 
 const addListItem = function () {
-  if (inputText.value !== "" && inputText.value !== null) {
+  const text = inputText.value;
+  if (/\S/.test(text)) {
     const div = document.createElement("div");
     const titleSpan = document.createElement("span");
     const deleteSpan = document.createElement("span");
