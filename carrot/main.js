@@ -11,10 +11,18 @@ let bugs = 0;
 let carrots = 0;
 let intervalId = null;
 
+const playSound = new Audio("./sound/bg.mp3");
+const bugPull = new Audio("./sound/bug_pull.mp3");
+const carrotPull = new Audio("./sound/carrot_pull.mp3");
+const win = new Audio("./sound/game_win.mp3");
+const alertSound = new Audio("./sound/alert.wav");
+
 body.addEventListener("click", (event) => {
   let btn = event.target.className;
 
   if (btn === "startBtn" || btn === "fas fa-play") {
+    playSound.play();
+
     count = getRandomNumber("count");
     bugs = getRandomNumber("bugs");
     carrots = getRandomNumber("carrots");
@@ -27,11 +35,13 @@ body.addEventListener("click", (event) => {
 
     intervalId = setInterval(() => {
       if (count <= 0) {
+        alertSound.play();
         clearInterval(intervalId);
         restartBox.style.zIndex = "1";
         startBtn.style.opacity = "0";
         icon.setAttribute("class", "fas fa-play");
       } else if (carrots === 0) {
+        win.play();
         clearInterval(intervalId);
         restartBox.style.zIndex = "1";
         restartBox.childNodes[3].textContent = "You Won";
@@ -50,7 +60,7 @@ body.addEventListener("click", (event) => {
     icon.setAttribute("class", "fas fa-play");
     timer.textContent = "00:00";
     carrotCount.textContent = "0";
-    startBtn.style.opacity = "1";
+    startBtn.style.opacity = "0";
     restartBox.style.zIndex = "1";
     restartBox.childNodes[3].textContent = "You Lost";
 
@@ -62,6 +72,7 @@ body.addEventListener("click", (event) => {
 
 gameBoard.addEventListener("click", (event) => {
   if (event.target.className === "carrot") {
+    carrotPull.play();
     const carrot_id = event.target.dataset.id;
 
     if (carrot_id) {
@@ -72,6 +83,7 @@ gameBoard.addEventListener("click", (event) => {
       carrots--;
     }
   } else if (event.target.className === "bug") {
+    bugPull.play();
     startBtn.style.opacity = "0";
     restartBox.style.zIndex = "1";
     restartBox.childNodes[3].textContent = "You Lost";
