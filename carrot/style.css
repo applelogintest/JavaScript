@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("./img/background.png") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  z-index: 0;
+}
+
+.container > div,
+.container .startBtn,
+.stoptBtn {
+  border: 4px solid black;
+  margin: 8px;
+}
+
+.container > .startBtn {
+  outline: none;
+  border-radius: 8px;
+  background: lightcoral;
+  cursor: pointer;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.container > .stoptBtn {
+  outline: none;
+  border-radius: 8px;
+  background: lightcoral;
+  cursor: pointer;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  width: 230px;
+  height: 60px;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.carrotCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  background: coral;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.gameBoard {
+  border: none;
+  margin-top: 220px;
+  width: 100%;
+  height: 50%;
+}
+
+.carrot {
+  position: absolute;
+  background: url("./img/carrot.png") no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.bug {
+  position: absolute;
+  background: url("./img/bug.png") no-repeat;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  left: 50px;
+}
+
+.container > .reStartBox {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 30px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 200px;
+  margin: 0;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.reStartBtn {
+  outline: none;
+  border: 4px solid black;
+  border-radius: 8px;
+  background: rgb(229, 223, 164);
+  cursor: pointer;
+  font-size: 30px;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+.reStartBox > span {
+  font-weight: bold;
+  font-size: 60px;
+  color: white;
+}
